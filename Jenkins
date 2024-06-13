@@ -28,5 +28,12 @@ pipeline {
                 ansiblePlaybook become: true, credentialsId: 'Ansible', disableHostKeyChecking: true, installation: 'Ansible', inventory: '/etc/ansible/hosts', playbook: 'ansible-playbook.yml', vaultTmpPath: ''
             }
         }
+      stage('Git checkout') {
+         stapes {
+            git url: 'https://github.com/HillolMondal/Health-Pro.git/', branch: "master"
+            sh "kubectl apply -f deployment.yaml"
+            sh "kubectl apply -f service.yaml"
     }
+   }
+ }
 }
