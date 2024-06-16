@@ -10,4 +10,4 @@
     command : sudo systemctl start docker
 
   - name: Deploy Docker Container
-    command: docker run -itd -p 8090:8082 hillol111/medicure:1.0
+    command: docker run -itd -p 8090:8082 hillol111/medicure:2.0
