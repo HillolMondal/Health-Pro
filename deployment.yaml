@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: medicure
-        image: hillol111/medicure:3.0
+        image: hillol111/medicure:1.0
         ports:
         - containerPort: 80
 
