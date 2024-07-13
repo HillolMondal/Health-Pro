@@ -4,8 +4,9 @@ metadata:
   name: medicure-service
 spec:
   selector:
-    app.kubernetes.io/name: medicure
+    app: medicure
   ports:
     - protocol: TCP
-      port: 80
-      targetPort: 9333
+      port: 8093
+      targetPort: 8093
+type: NodePort
